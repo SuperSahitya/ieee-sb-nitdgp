@@ -1,0 +1,112 @@
+.navbarContainer {
+  position: fixed;
+  z-index: 1000;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  padding: 0px 30px;
+  background-color: rgb(68, 153, 255);
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  height: 70%;
+  aspect-ratio: 701/360;
+  background-image: url("../../public/ieeesb_logo_white.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.navLinks {
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  min-width: 430px;
+  max-width: 520px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  padding: 7px;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLink::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+
+.navLink:hover::after {
+  width: calc(100% + 5px);
+}
+
+.navLinkActive::after {
+  content: "";
+  height: 2px;
+  width: calc(100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+
+.iconContainer {
+  display: none;
+}
+
+.panel {
+  background-color: rgb(68, 153, 255);
+  color: white;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vh;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    padding: 0px 10px;
+  }
+  .navLinks {
+    display: none;
+  }
+  .iconContainer {
+    display: block;
+  }
+  .menuIcon {
+    font-size: 1.4rem;
+    color: white;
+  }
+}

@@ -1,0 +1,90 @@
+.aboutContainer {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutDataContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* height: 60%; */
+}
+
+.aboutData {
+  position: relative;
+}
+/* .aboutData::after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  color: black;
+  position: absolute;
+  top: 0;
+  right: -15%;
+} */
+
+.aboutHeading {
+  font-size: 2.5rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.aboutHeading::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.aboutStatement {
+  padding: 2rem;
+  min-width: 350px;
+  max-width: 750px;
+  width: 60%;
+}
+
+.video {
+  width: 30%;
+}
+
+.aboutData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutNumber {
+  color: rgb(68, 153, 255);
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.abouteName {
+  font-weight: 400;
+}
+
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+  }
+}
