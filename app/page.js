@@ -18,6 +18,11 @@ const childVariants = {
   visible: { y: 0 },
 };
 
+const introductionVariants = {
+  hidden: { y: "10vh" },
+  visible: { y: 0 },
+};
+
 const introductionList = [
   {
     url: "/innovation.png",
@@ -69,20 +74,45 @@ export default function Home() {
         </motion.div>
       </div>
       <div className={styles.introductionCardContainer}>
-        <div className={styles.introductionPositionContainer}>
+        <motion.div
+          className={styles.introductionPositionContainer}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
           {introductionList.map((ele, index) => {
             return (
-              <IntroductionCard
+              <motion.div
+                className={styles.introductionCard}
+                variants={introductionVariants}
                 key={index}
-                text={ele.text}
-                imageUrl={ele.url}
-              ></IntroductionCard>
+              >
+                <IntroductionCard
+                  key={index}
+                  text={ele.text}
+                  imageUrl={ele.url}
+                ></IntroductionCard>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
         <div className={styles.emptyIntro}>
-          {introductionList.map((ele) => {
-            return <IntroductionCard></IntroductionCard>;
+          {introductionList.map((ele, index) => {
+            return (
+              <motion.div className={styles.introductionCard}>
+                <IntroductionCard
+                  key={index}
+                  text={ele.text}
+                  imageUrl={ele.url}
+                ></IntroductionCard>
+              </motion.div>
+            );
           })}
         </div>
       </div>
