@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  padding: 2rem 0rem;
   width: 100vw;
   background-color: #f4f4f4;
   display: flex;
@@ -12,6 +12,8 @@
       rgba(245, 245, 245, 0.94)
     ),
     url("/bg-sec-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .heading {
@@ -42,4 +44,11 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media (max-width: 800px) {
+  .aboutCards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }

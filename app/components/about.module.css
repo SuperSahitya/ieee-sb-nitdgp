@@ -1,5 +1,6 @@
 .aboutContainer {
-  height: 90vh;
+  min-height: 90vh;
+  padding: 2rem 0rem;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -86,5 +87,15 @@
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .aboutStatement {
+    width: 80%;
+  }
+  .video {
+    width: 50%;
+  }
+  .aboutName {
+    font-size: 0.7rem;
   }
 }
