@@ -70,9 +70,10 @@ export default function Home() {
       </div>
       <div className={styles.introductionCardContainer}>
         <div className={styles.introductionPositionContainer}>
-          {introductionList.map((ele) => {
+          {introductionList.map((ele, index) => {
             return (
               <IntroductionCard
+                key={index}
                 text={ele.text}
                 imageUrl={ele.url}
               ></IntroductionCard>

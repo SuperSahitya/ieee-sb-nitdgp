@@ -3,9 +3,10 @@
   height: 90vh;
   width: 100vw;
   background-color: rgb(68, 153, 255);
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
 }
 
 .hero {
