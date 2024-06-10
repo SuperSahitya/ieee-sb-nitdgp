@@ -8,7 +8,8 @@ const Event = ({ heading, paragraph, image, date }) => {
         style={{
           background: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
         className={styles.image}
       ></div>
