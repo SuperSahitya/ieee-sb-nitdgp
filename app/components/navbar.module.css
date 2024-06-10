@@ -110,3 +110,14 @@
     color: white;
   }
 }
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(44, 44, 44, 0.578); */
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}

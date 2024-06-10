@@ -46,6 +46,9 @@ const Navbar = () => {
   ];
   return (
     <>
+      {isOpen && (
+        <div className={styles.overlay} onClick={() => setOpen(false)}></div>
+      )}
       <div className={styles.navbarContainer}>
         <div
           className={styles.navbar}
@@ -93,6 +96,7 @@ const Navbar = () => {
               exit={{
                 y: "-55vh",
               }}
+              onClick={() => setOpen(false)}
             >
               {linkArray.map((link) => {
                 return (
