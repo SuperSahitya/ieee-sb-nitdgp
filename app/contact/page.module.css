@@ -1,0 +1,89 @@
+.container {
+  margin-top: 10vh;
+  /* height: 90vh; */
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* padding-bottom: 10vh; */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68, 153, 255);
+  color: white;
+  width: 100%;
+  padding: 4rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.name {
+  padding: 0.5rem;
+  width: 300px;
+  border: solid black 1px;
+  background-color: #eeeeee;
+}
+
+.email {
+  padding: 0.5rem;
+  width: 300px;
+  border: solid black 1px;
+  background-color: #eeeeee;
+}
+
+.message {
+  padding: 0.5rem;
+  height: 200px;
+  width: 300px;
+  border: solid black 1px;
+  background-color: #eeeeee;
+}
+
+.submit {
+  background-color: rgb(68, 153, 255);
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* border: none; */
+  color: white;
+}
+
+.contactInformation {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}

@@ -1,6 +1,7 @@
 "use client";
 import About from "./components/About";
 import AboutIEEE from "./components/AboutIEEE";
+import Footer from "./components/Footer";
 import IntroductionCard from "./components/IntroductionCard";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";

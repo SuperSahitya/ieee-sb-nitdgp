@@ -1,0 +1,43 @@
+.container {
+  margin-top: 10vh;
+  /* height: 90vh; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-bottom: 10vh; */
+  flex-direction: column;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68, 153, 255);
+  color: white;
+  width: 100%;
+  padding: 4rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+.faculty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.memberHeading {
+  padding: 2rem;
+}

@@ -1,0 +1,29 @@
+.container {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  gap: 1rem;
+  /* background-color: #eee; */
+}
+
+.image {
+  width: 280px;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.post {
+  font-size: 0.9rem;
+}

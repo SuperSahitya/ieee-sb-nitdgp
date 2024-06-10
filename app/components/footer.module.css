@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.dataContainer {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  height: 90%;
+  max-width: 350px;
+  gap: 1rem;
+}
+
+.image {
+  background-image: url("/ieeesb_logo_theme.svg");
+  height: 70px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.data {
+  min-width: 300px;
+  width: 33%;
+}
+
+.linksHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.linksList {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: rgb(68, 153, 255);
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .dataContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .data {
+    width: 100%;
+  }
+}
+
+.socialLinks {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialLink {
+  text-decoration: none;
+  color: rgb(68, 153, 255);
+  font-size: 2rem;
+}
