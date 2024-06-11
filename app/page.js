@@ -5,7 +5,7 @@ import Collaborations from "./components/Collaborations";
 import Footer from "./components/Footer";
 import IntroductionCard from "./components/IntroductionCard";
 import styles from "./page.module.css";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const containerVariants = {
   visible: {
@@ -16,6 +16,10 @@ const containerVariants = {
 };
 
 const childVariants = {
+  hidden: { y: "110%" },
+  visible: { y: 0 },
+};
+const cardVariants = {
   hidden: { y: "110%" },
   visible: { y: 0 },
 };
@@ -92,7 +96,13 @@ export default function Home() {
             return (
               <motion.div
                 className={styles.introductionCard}
-                variants={introductionVariants}
+                // variants={cardVariants}
+                // initial="hidden"
+                // animate="visible"
+                initial={{ y: "50%", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.1 * index }}
+                viewport={{ once: true }}
                 key={index}
               >
                 <IntroductionCard
