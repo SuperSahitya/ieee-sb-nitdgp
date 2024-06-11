@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
+import { HiLocationMarker } from "react-icons/hi";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 
 const Page = () => {
@@ -63,18 +64,18 @@ const Page = () => {
         </form>
         <div className={styles.contactInformation}>
           <div className={styles.linkContainer}>
-            <FaLocationDot className={styles.icon}></FaLocationDot>
-            <div className={styles.address}>
+            <HiLocationMarker className={styles.icon}></HiLocationMarker>
+            <div className={styles.data}>
               NIT Durgapur, Mahatma Gandhi Avenue, Durgapur, West Bengal, India
             </div>
           </div>
           <div className={styles.linkContainer}>
             <IoIosMail className={styles.icon} />{" "}
-            <div>ieeesb.nitdgp@gmail.com</div>
+            <div className={styles.data}>ieeesb.nitdgp@gmail.com</div>
           </div>
           <div className={styles.linkContainer}>
             <FaPhoneSquareAlt className={styles.icon} />{" "}
-            <div>+91 999 999 9999</div>
+            <div className={styles.data}>+91 999 999 9999</div>
           </div>
         </div>
       </div>
