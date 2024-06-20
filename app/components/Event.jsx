@@ -1,9 +1,17 @@
+"use client";
 import React from "react";
 import styles from "./event.module.css";
+import { motion, delay } from "framer-motion";
 
-const Event = ({ heading, paragraph, image, date }) => {
+const Event = ({ heading, paragraph, image, date, index }) => {
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial={{ y: "50%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.05 * index }}
+      viewport={{ once: true }}
+    >
       <div
         style={{
           background: `url(${image})`,
@@ -20,7 +28,7 @@ const Event = ({ heading, paragraph, image, date }) => {
         </div>
         <div className={styles.paragraph}>{paragraph}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

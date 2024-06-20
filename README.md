@@ -1,1 +1,2 @@
-IEEESB NITDGP
+# IEEE Student Branch, NIT Durgapur 
+
