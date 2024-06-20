@@ -3,6 +3,19 @@ import styles from "./aboutieee.module.css";
 import AboutCard from "./AboutCard";
 
 const AboutIEEE = () => {
+  const aboutInformation = [
+    {
+      heading: "IEEE Membership",
+      paragraph:
+        "To join this community of over 425,000 technology and engineering professionals united by a common desire to continuously learn, interact, collaborate, and innovate visit ieee/membership and obtain your membership at the earliest.",
+    },
+    {
+      heading: "IEEE Societies",
+      paragraph:
+        "IEEE Society members stay technically current, network with colleagues locally and abroad, and collaborate on research and projects with leading experts -- all while taking advantage of specialized opportunities.",
+    },
+  ];
+
   return (
     <>
       <div className={styles.container}>
@@ -21,17 +34,16 @@ const AboutIEEE = () => {
           IEEE visit ieee.org .
         </div>
         <div className={styles.aboutCards}>
-          <AboutCard
-            heading="IEEE Membership"
-            paragraph="To join this community of over 425,000 technology and engineering
-        professionals united by a common desire to continuously learn, interact,
-        collaborate, and innovate visit ieee/membership and obtain your
-        membership at the earliest."
-          ></AboutCard>
-          <AboutCard
-            heading="IEEE Societies"
-            paragraph="IEEE Society members stay technically current, network with colleagues locally and abroad, and collaborate on research and projects with leading experts -- all while taking advantage of specialized opportunities."
-          ></AboutCard>
+          {aboutInformation.map((e, i) => {
+            return (
+              <AboutCard
+                key={i}
+                heading={e.heading}
+                paragraph={e.paragraph}
+                index={i}
+              ></AboutCard>
+            );
+          })}
         </div>
       </div>
     </>

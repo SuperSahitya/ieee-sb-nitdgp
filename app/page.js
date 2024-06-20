@@ -96,12 +96,9 @@ export default function Home() {
             return (
               <motion.div
                 className={styles.introductionCard}
-                // variants={cardVariants}
-                // initial="hidden"
-                // animate="visible"
                 initial={{ y: "50%", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.1 * index }}
+                transition={{ delay: 0.05 * index }}
                 viewport={{ once: true }}
                 key={index}
               >
