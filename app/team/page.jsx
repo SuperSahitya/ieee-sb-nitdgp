@@ -33,7 +33,7 @@ const Page = () => {
       post: "Vice Chair",
     },
     {
-      image: "/Members/Anshuman.jpg",
+      image: "/Members/anshuman.png",
       name: "Anshuman Jha",
       post: "General Secretary",
     },
