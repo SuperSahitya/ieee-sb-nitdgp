@@ -59,8 +59,8 @@ const Footer = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5780853572996!2d87.29095021481118!3d23.547672784689695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f772081cede5e9%3A0x33fb9ccb243dfa5!2sNational%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1570224535721!5m2!1sen!2sin"
           height="200"
-          frameborder="0"
-          allowfullscreen=""
+          frameBorder="0"
+          allowFullScreen=""
         ></iframe>
       </div>
     </div>

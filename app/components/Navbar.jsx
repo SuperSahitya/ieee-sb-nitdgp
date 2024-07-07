@@ -60,9 +60,10 @@ const Navbar = () => {
         >
           <div className={styles.logo}></div>
           <div className={styles.navLinks}>
-            {linkArray.map((link) => {
+            {linkArray.map((link, idx) => {
               return (
                 <Link
+                  key={idx}
                   className={
                     pathname == link.pathname
                       ? `${styles.navLink} ${styles.navLinkActive}`
@@ -98,9 +99,10 @@ const Navbar = () => {
               }}
               onClick={() => setOpen(false)}
             >
-              {linkArray.map((link) => {
+              {linkArray.map((link, idx) => {
                 return (
                   <Link
+                    key={idx}
                     className={
                       pathname == link.pathname
                         ? `${styles.navLink} ${styles.navLinkActive}`

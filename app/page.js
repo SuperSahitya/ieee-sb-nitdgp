@@ -103,7 +103,6 @@ export default function Home() {
                 key={index}
               >
                 <IntroductionCard
-                  key={index}
                   text={ele.text}
                   imageUrl={ele.url}
                 ></IntroductionCard>
@@ -114,9 +113,8 @@ export default function Home() {
         <div className={styles.emptyIntro}>
           {introductionList.map((ele, index) => {
             return (
-              <motion.div className={styles.introductionCard}>
+              <motion.div className={styles.introductionCard} key={index}>
                 <IntroductionCard
-                  key={index}
                   text={ele.text}
                   imageUrl={ele.url}
                 ></IntroductionCard>
