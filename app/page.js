@@ -81,24 +81,15 @@ export default function Home() {
       </div>
       <div className={styles.introductionCardContainer}>
         <motion.div
-          className={styles.introductionPositionContainer}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
+          className={styles.introductionPositionContainer}  
         >
           {introductionList.map((ele, index) => {
             return (
               <motion.div
                 className={styles.introductionCard}
-                initial={{ y: "50%", opacity: 0 }}
+                initial={{ y: "25%", opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.05 * index }}
+                transition={{ delay: 0.03 * index }}
                 viewport={{ once: true }}
                 key={index}
               >
