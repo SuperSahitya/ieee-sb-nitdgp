@@ -20,10 +20,10 @@ const Member = ({ name, post, image, linkedin, instagram }) => {
         <div className={styles.post}>{post}</div>
         {linkedin && instagram && (
           <div className={styles.icons}>
-            <a href={linkedin}>
+            <a href={linkedin} target="_blank">
               <FaLinkedinIn className={styles.icon} />
             </a>
-            <a href={instagram}>
+            <a href={instagram} target="_blank">
               <FaInstagram className={styles.icon} />
             </a>
           </div>
