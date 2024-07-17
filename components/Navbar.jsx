@@ -44,12 +44,32 @@ const Navbar = () => {
       linkName: "Contact Us",
     },
   ];
+
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hidden, setHidden] = useState(false);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    setHidden(currentScrollY > lastScrollY);
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
   return (
     <>
       {isOpen && (
         <div className={styles.overlay} onClick={() => setOpen(false)}></div>
       )}
-      <div className={styles.navbarContainer}>
+      <div
+        className={styles.navbarContainer}
+        style={{
+          transform: hidden ? "translateY(-100%)" : "translateY(0)",
+          transition: "transform 0.3s ease",
+        }}
+      >
         <div
           className={styles.navbar}
           // style={

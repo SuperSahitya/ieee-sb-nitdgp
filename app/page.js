@@ -19,15 +19,6 @@ const childVariants = {
   hidden: { y: "110%" },
   visible: { y: 0 },
 };
-const cardVariants = {
-  hidden: { y: "110%" },
-  visible: { y: 0 },
-};
-
-const introductionVariants = {
-  hidden: { y: "10vh" },
-  visible: { y: 0 },
-};
 
 const introductionList = [
   {
