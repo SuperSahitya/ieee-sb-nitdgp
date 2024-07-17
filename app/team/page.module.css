@@ -48,5 +48,6 @@
 }
 
 .active {
-  background-color: #eee;
+  background-color: var(--primary-color);
+  color: white;
 }
