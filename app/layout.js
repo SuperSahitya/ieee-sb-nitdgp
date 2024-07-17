@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "IEEE SB NITDGP",
+  title: "IEEE | NITDGP",
   description:
     "International Institute Of Electical And Electronics Student Branch NIT Durgapur",
 };

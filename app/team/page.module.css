@@ -39,5 +39,14 @@
 }
 
 .memberHeading {
-  padding: 2rem;
+  margin: 2rem;
+  padding: 0.6rem 1rem;
+  background-color: inherit;
+  border: none;
+  font-weight: 700;
+  font-size: large;
+}
+
+.active {
+  background-color: #eee;
 }

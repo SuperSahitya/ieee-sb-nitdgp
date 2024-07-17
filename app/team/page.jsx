@@ -1,133 +1,14 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import Member from "../../components/Member";
+import { faculty } from "@/data/faculty";
+import { finalYear } from "@/data/finalYear";
+import { secondYear } from "@/data/secondYear";
+import { thirdYear } from "@/data/thirdYear";
 
 const Page = () => {
-  const faculty = [
-    {
-      image: "/Members/ACsir.jpg",
-      name: "Aniruddha Chandra",
-      post: "Counselor",
-    },
-    {
-      image: "/Members/NKRsir.jpg",
-      name: "Nirmal Kumar Roy",
-      post: "Faculty Advisor",
-    },
-    {
-      image: "/Members/CKsir.jpg",
-      name: "Chiranjib Koley",
-      post: "Faculty Advisor",
-    },
-  ];
-
-  const finalYear = [
-    {
-      image: "/Members/IEEE-BSV.jpeg",
-      name: "Balivada Sri Vamsi",
-      post: "Chair",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Arindam.webp",
-      name: "Arindam Chatterjee",
-      post: "Chair, CS Society",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Arghya.jpeg",
-      name: "Arghya Kamal Das",
-      post: "Vice Chair",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/mohit.jpg",
-      name: "Mohit Kumar",
-      post: "Vice Chair, CS Society, WebMaster",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/anshuman.png",
-      name: "Anshuman Jha",
-      post: "General Secretary",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Raja.jpg",
-      name: "Raja Paul",
-      post: "Secretary, CS Society",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Gourav.jpg",
-      name: "Gourav Das",
-      post: "Treasurer",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Yoges.jpeg",
-      name: "Yogesh Kumar",
-      post: "Convenor",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Debashis.jpeg",
-      name: "Debashis Panigrahi",
-      post: "Sponsorship & PR Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Sukamal.jpeg",
-      name: "Sukamal Samanta",
-      post: "Design Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Shoiab.jpg",
-      name: "S Shoiab Basit",
-      post: "Design Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Sambhu.jpg",
-      name: "Kotana Sambhu",
-      post: "Video Team Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Sourodeep.jpeg",
-      name: "Souradip Mukherjee",
-      post: "Event Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/Kirtika.jpg",
-      name: "Kirtika Gautam",
-      post: "Logistics Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-    {
-      image: "/Members/SnehaGhosh.jpg",
-      name: "Sneha Ghosh",
-      post: "ATH Head",
-      linkedin: "https://www.linkedin.com/in/",
-      instagram: "https://www.instagram.com/",
-    },
-  ];
+  const [memberYear, setMemberYear] = useState("final");
 
   return (
     <div className={styles.container}>
@@ -143,19 +24,74 @@ const Page = () => {
           />
         ))}
       </div>
-      <h1 className={styles.memberHeading}>Final Year</h1>
-      <div className={styles.members}>
-        {finalYear.map((member, index) => (
-          <Member
-            key={index}
-            image={member.image}
-            name={member.name}
-            post={member.post}
-            linkedin={member.linkedin}
-            instagram={member.instagram}
-          />
-        ))}
+      <div>
+        <button
+          className={`${styles.memberHeading} ${
+            memberYear == "final" ? styles.active : ""
+          }`}
+          onClick={() => setMemberYear("final")}
+        >
+          Final Year
+        </button>
+        <button
+          className={`${styles.memberHeading} ${
+            memberYear == "third" ? styles.active : ""
+          }`}
+          onClick={() => setMemberYear("third")}
+        >
+          3rd Year
+        </button>
+        <button
+          className={`${styles.memberHeading} ${
+            memberYear == "second" ? styles.active : ""
+          }`}
+          onClick={() => setMemberYear("second")}
+        >
+          2nd Year
+        </button>
       </div>
+      {memberYear == "final" && (
+        <div className={styles.members}>
+          {finalYear.map((member, index) => (
+            <Member
+              key={index}
+              image={member.image}
+              name={member.name}
+              post={member.post}
+              linkedin={member.linkedin}
+              instagram={member.instagram}
+            />
+          ))}
+        </div>
+      )}
+      {memberYear == "third" && (
+        <div className={styles.members}>
+          {thirdYear.map((member, index) => (
+            <Member
+              key={index}
+              image={member.image}
+              name={member.name}
+              post={member.post}
+              linkedin={member.linkedin}
+              instagram={member.instagram}
+            />
+          ))}
+        </div>
+      )}
+      {memberYear == "second" && (
+        <div className={styles.members}>
+          {secondYear.map((member, index) => (
+            <Member
+              key={index}
+              image={member.image}
+              name={member.name}
+              post={member.post}
+              linkedin={member.linkedin}
+              instagram={member.instagram}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
