@@ -59,7 +59,7 @@
   content: "";
   height: 5px;
   width: 5px;
-  background-color: rgb(68, 153, 255);
+  background-color: var(--primary-color);
   position: absolute;
   top: 50%;
   left: -10%;
@@ -90,6 +90,6 @@
 
 .socialLink {
   text-decoration: none;
-  color: rgb(68, 153, 255);
+  color: var(--primary-color);
   font-size: 2rem;
 }

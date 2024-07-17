@@ -10,6 +10,7 @@ const AboutCard = ({ heading, paragraph, index }) => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.04 * index }}
       viewport={{ once: true }}
+      whileHover={{ x: 10, y: -10, transition: { duration: 0.1 } }}
     >
       <div className={styles.aboutHead}>{heading}</div>
       <div className={styles.aboutContent}>{paragraph}</div>

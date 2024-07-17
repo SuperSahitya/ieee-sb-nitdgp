@@ -54,7 +54,7 @@ const Navbar = () => {
           className={styles.navbar}
           // style={
           //   y > 100
-          //     ? { backgroundColor: "rgb(68, 153, 255)" }
+          //     ? { backgroundColor: "var(--primary-color)" }
           //     : { backgroundColor: "transparent" }
           // }
         >

@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   padding: 0px 30px;
-  background-color: rgb(68, 153, 255);
+  background-color: var(--primary-color);
   width: 100vw;
   height: 10vh;
   justify-content: space-between;
@@ -79,7 +79,7 @@
 }
 
 .panel {
-  background-color: rgb(68, 153, 255);
+  background-color: var(--primary-color);
   color: white;
   position: absolute;
   z-index: 1;

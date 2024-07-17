@@ -102,7 +102,7 @@ export default function Home() {
           })}
         </motion.div>
         <div className={styles.emptyIntro}>
-          {introductionList.map((ele, index) => {
+          {/* {introductionList.map((ele, index) => {
             return (
               <motion.div className={styles.introductionCard} key={index}>
                 <IntroductionCard
@@ -111,7 +111,7 @@ export default function Home() {
                 ></IntroductionCard>
               </motion.div>
             );
-          })}
+          })} */}
         </div>
       </div>
       <About></About>

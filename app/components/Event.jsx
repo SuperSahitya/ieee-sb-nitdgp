@@ -11,6 +11,7 @@ const Event = ({ heading, paragraph, image, date, index }) => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.04 * index }}
       viewport={{ once: true }}
+      whileHover={{ x: 10, y: -10, transition: { duration: 0 } }}
     >
       <div
         style={{
