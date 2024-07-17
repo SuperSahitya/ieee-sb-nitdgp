@@ -35,10 +35,9 @@
   width: 100%;
   font-size: 1.6rem;
   font-weight: 700;
-  background: url("/bg-small.jpg");
+  background: url("/large-triangles.png");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .aboutContent {
   height: 50%;

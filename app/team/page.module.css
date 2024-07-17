@@ -13,6 +13,9 @@
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
+  background: url("/large-triangles.png");
+  background-position: center;
+  background-size: contain;
   color: white;
   width: 100%;
   padding: 4rem;
