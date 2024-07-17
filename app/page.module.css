@@ -7,6 +7,11 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 10vh;
+  background: url("/bg.png");
+  /* background: url("/bg2.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero {
@@ -58,6 +63,7 @@
   top: -10vh;
   padding: 1rem;
   height: 100%;
+  z-index: 12;
 }
 
 .emptyIntro {
@@ -66,7 +72,6 @@
   justify-content: center;
   height: 100%;
   opacity: 0;
-  height: 220px;
 }
 
 @media (max-width: 1200px) {
