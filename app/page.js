@@ -1,9 +1,9 @@
 "use client";
-import About from "./components/About";
-import AboutIEEE from "./components/AboutIEEE";
-import Collaborations from "./components/Collaborations";
-import Footer from "./components/Footer";
-import IntroductionCard from "./components/IntroductionCard";
+import About from "../components/About";
+import AboutIEEE from "../components/AboutIEEE";
+import Collaborations from "../components/Collaborations";
+import Footer from "../components/Footer";
+import IntroductionCard from "../components/IntroductionCard";
 import styles from "./page.module.css";
 import { delay, motion } from "framer-motion";
 
@@ -80,9 +80,7 @@ export default function Home() {
         </motion.div>
       </div>
       <div className={styles.introductionCardContainer}>
-        <motion.div
-          className={styles.introductionPositionContainer}  
-        >
+        <motion.div className={styles.introductionPositionContainer}>
           {introductionList.map((ele, index) => {
             return (
               <motion.div

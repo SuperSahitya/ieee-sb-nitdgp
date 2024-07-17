@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./page.module.css";
-import Member from "../components/Member";
+import Member from "../../components/Member";
 
 const Page = () => {
   const faculty = [

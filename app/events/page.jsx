@@ -1,7 +1,7 @@
 "use effect";
 import React from "react";
 import styles from "./page.module.css";
-import Event from "../components/Event";
+import Event from "../../components/Event";
 import { motion } from "framer-motion";
 
 const page = () => {
