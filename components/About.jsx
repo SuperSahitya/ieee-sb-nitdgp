@@ -20,7 +20,7 @@ const About = () => {
             className={styles.video}
             src="/ieeetrailer.mp4"
             controls
-            autoPlay={true}
+            autoPlay={false}
           ></video>
         </div>
         <div className={styles.aboutDataContainer}>
