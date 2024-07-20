@@ -12,6 +12,7 @@
   min-height: 550px;
   border-radius: 10px;
   /* background-color: rgb(209, 230, 255); */
+  background-color: white;
   transition: all 100ms ease-out;
 }
 

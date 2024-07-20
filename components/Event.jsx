@@ -9,7 +9,7 @@ const Event = ({ heading, paragraph, image, date, index }) => {
       className={styles.container}
       initial={{ y: "20%", opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.04 * index }}
+      transition={{ delay: 0.01 }}
       viewport={{ once: true }}
       whileHover={{ x: 10, y: -10, transition: { duration: 0 } }}
     >

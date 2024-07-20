@@ -12,8 +12,8 @@ const Footer = () => {
         <div className={styles.image}></div>
         <div className={styles.data}>
           The IEEE Student Branch, NIT Durgapur is a society of enthusiasts
-          aimed at promoting research-related activities in the campus
-          .Comprising of bright researchers, developers, speakers, and other
+          aimed at promoting research-related activities in the campus.
+          Comprising of bright researchers, developers, speakers, and other
           contributors we are a society that welcomes in the era of better
           research prospects, on the campus.
         </div>
@@ -21,35 +21,39 @@ const Footer = () => {
       <div className={styles.links}>
         <div className={styles.linksHeading}>About Us</div>
         <div className={styles.linksList}>
-          <Link className={styles.link} href={"/"}>
+          <a className={styles.link} href="/#about-us">
             About Us
-          </Link>
-          <Link className={styles.link} href={"/"}>
+          </a>
+          <Link
+            className={styles.link}
+            href={"https://www.ieee.org/"}
+            target="_blank"
+          >
             About IEEE
           </Link>
-          <Link className={styles.link} href={"/"}>
+          <Link className={styles.link} href={"/events"}>
             Our Activities
           </Link>
-          <Link className={styles.link} href={"/"}>
+          <Link className={styles.link} href={"/teams"}>
             Our Teams
           </Link>
         </div>
         <div className={styles.socialLinks}>
           <Link
             className={styles.socialLink}
-            href={"https://facebook.com/ieee"}
+            href={"https://m.facebook.com/nitdgpieeesociety/"}
           >
             <FaFacebookSquare />
           </Link>
           <Link
             className={styles.socialLink}
-            href={"https://facebook.com/ieee"}
+            href={"https://www.instagram.com/ieeesb_nitdgp/"}
           >
             <FaSquareInstagram />
           </Link>
           <Link
             className={styles.socialLink}
-            href={"https://facebook.com/ieee"}
+            href={"https://in.linkedin.com/company/ieeesbnitdgp"}
           >
             <FaLinkedin />
           </Link>
