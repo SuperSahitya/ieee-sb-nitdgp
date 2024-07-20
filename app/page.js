@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 import IntroductionCard from "../components/IntroductionCard";
 import styles from "./page.module.css";
 import { delay, motion } from "framer-motion";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useState } from "react";
 
 const containerVariants = {
   visible: {
@@ -40,8 +43,90 @@ const introductionList = [
 ];
 
 export default function Home() {
+  const [init, setInit] = useState(false);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
   return (
     <>
+      <Particles
+        className={styles.particles}
+        id="tsparticles"
+        options={{
+          height: "100vh",
+          pauseOnBlur: true,
+          background: {
+            color: {
+              value: "rgb(68, 153, 255)",
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 6,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+          fullScreen: { enable: false, zIndex: -10 },
+          height: "100vh",
+          width: "100vw",
+        }}
+      ></Particles>
       <div className={styles.container}>
         <motion.div
           variants={containerVariants}

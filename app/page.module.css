@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 10vh;
-  background: url("/bg.png");
+  /* background: url("/bg.png"); */
   /* background: url("/bg2.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
@@ -96,4 +96,12 @@
     flex: 0.8;
     /* min-width: 250px; */
   }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 }
