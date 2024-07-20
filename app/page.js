@@ -25,19 +25,19 @@ const childVariants = {
 
 const introductionList = [
   {
-    url: "/innovation.png",
+    url: "/IntroductionImages/innovation.png",
     text: "Providing the perfect platform for all to collaborate and innovate.",
   },
   {
-    url: "/seminar.png",
+    url: "/IntroductionImages/seminar.png",
     text: "Attend seminars and workshops on the most trending and interesting topics led by leading scientists and industry personnel",
   },
   {
-    url: "/research.png",
+    url: "/IntroductionImages/research.png",
     text: "Collaborate with the best minds to take your projects to the next level.",
   },
   {
-    url: "/networking.png",
+    url: "/IntroductionImages/networking.png",
     text: "Expand your network by connecting with the best minds in the field.",
   },
 ];
