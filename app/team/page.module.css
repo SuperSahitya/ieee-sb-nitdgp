@@ -50,6 +50,12 @@
   font-size: large;
 }
 
+@media (max-width: 550px){
+  .memberHeading {
+    margin: 0.5rem;
+  }
+}
+
 .active {
   background-color: var(--primary-color);
   color: white;
