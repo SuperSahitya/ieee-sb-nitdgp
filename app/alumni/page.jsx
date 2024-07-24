@@ -11,12 +11,14 @@ const Page = () => {
       <h1 className={styles.memberHeading}>2024 Batch</h1>
       {
         <div className={styles.members}>
-          {Alumni.map((member, index) => (
+          {Alumni.map((alumni, index) => (
             <Member
               key={index}
-              image={member.image}
-              name={member.name}
-              post={member.post}
+              image={alumni.image}
+              name={alumni.name}
+              post={alumni.post}
+              linkedin={alumni.linkedin}
+              instagram={alumni.instagram}
             />
           ))}
         </div>
