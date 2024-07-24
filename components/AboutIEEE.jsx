@@ -7,7 +7,7 @@ const AboutIEEE = () => {
     {
       heading: "IEEE Membership",
       paragraph:
-        "To join this community of over 425,000 technology and engineering professionals united by a common desire to continuously learn, interact, collaborate, and innovate visit ieee/membership and obtain your membership at the earliest.",
+        {},
     },
     {
       heading: "IEEE Societies",
@@ -31,7 +31,14 @@ const AboutIEEE = () => {
           development; network with other professionals in your local area or
           within a specific technical interest; mentor the next generation of
           engineers and technologists, and so much more. For more info about
-          IEEE visit ieee.org .
+          IEEE visit{" "}
+          <a
+            href="https://www.ieee.org/"
+            style={{ color: "rgb(68, 153, 255)" }}
+          >
+            ieee.org
+          </a>{" "}
+          .
         </div>
         <div className={styles.aboutCards}>
           {aboutInformation.map((e, i) => {
