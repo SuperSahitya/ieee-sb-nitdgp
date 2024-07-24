@@ -59,13 +59,32 @@
 }
 
 .submit {
-  background-color: var(--primary-color);
   padding: 0.5rem 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  /* border: none; */
+  border: none;
   color: white;
-  /* border-radius: 5px; */
+  border-radius: 5px;
+  transition: all 100ms ease-out;
+}
+
+.send {
+  background-color: var(--primary-color);
+}
+
+.tryAgain {
+  background-color: tomato;
+}
+
+.sent {
+  background-color: rgb(11, 236, 68);
+}
+.submit:hover {
+  scale: 1.05;
+}
+
+.submit:active {
+  transform: scale(0.95);
 }
 
 .contactInformation {
@@ -102,4 +121,8 @@
     font-size: 0.8rem;
     max-width: 250px;
   }
+}
+
+.red::placeholder {
+  color: tomato;
 }
