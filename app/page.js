@@ -61,7 +61,7 @@ export default function Home() {
           pauseOnBlur: true,
           background: {
             color: {
-              value: "rgb(68, 153, 255)",
+              value: "#01295F",
             },
           },
           fpsLimit: 120,
@@ -175,7 +175,7 @@ export default function Home() {
             );
           })}
         </motion.div>
-        <div className={styles.emptyIntro}>
+        {/* <div className={styles.emptyIntro}>
           {introductionList.map((ele, index) => {
             return (
               <motion.div className={styles.introductionCard} key={index}>
@@ -186,7 +186,7 @@ export default function Home() {
               </motion.div>
             );
           })}
-        </div>
+        </div> */}
       </div>
       <About></About>
       <AboutIEEE></AboutIEEE>
