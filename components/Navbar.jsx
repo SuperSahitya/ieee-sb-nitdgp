@@ -78,7 +78,7 @@ const Navbar = () => {
           //     : { backgroundColor: "transparent" }
           // }
         >
-          <div className={styles.logo}></div>
+          <Link className={styles.logo} href={"/"}><div className={styles.logoImage}></div></Link>
           <div className={styles.navLinks}>
             {linkArray.map((link, idx) => {
               return (

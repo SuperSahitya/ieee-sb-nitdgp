@@ -28,6 +28,11 @@
   background-repeat: no-repeat;
 }
 
+.logoImage {
+  height: 100%;
+  width: 100%;
+}
+
 .navLinks {
   height: 70%;
   display: flex;
