@@ -10,6 +10,7 @@ const Page = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [buttonText, setButtonText] = useState("Send");
   const [error, setError] = useState(false);
@@ -55,20 +56,20 @@ const Page = () => {
 
       if (!foundError) {
         try {
+          setButtonText("Sending ...");
           const messageToSend = {
             name: name,
             email: email,
             message: message,
           };
           console.log(messageToSend);
-          const response = await fetch("/api/send", {
+          const response = await fetch("/api/sendx", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(messageToSend),
           });
-          // console.log(await response.json());
           if (response.ok) {
             setButtonText("Sent");
           } else {
@@ -91,7 +92,9 @@ const Page = () => {
             ref={nameRef}
             value={name}
             className={
-              !error ? `${styles.name}` : `${styles.name} ${styles.red}`
+              !error
+                ? `${styles.name} ${styles.input}`
+                : `${styles.name} ${styles.input} ${styles.red}`
             }
             onChange={handleNameChange}
             placeholder="Name"
@@ -101,7 +104,9 @@ const Page = () => {
             ref={emailRef}
             value={email}
             className={
-              !error ? `${styles.email}` : `${styles.email} ${styles.red}`
+              !error
+                ? `${styles.email} ${styles.input}`
+                : `${styles.email} ${styles.input} ${styles.red}`
             }
             onChange={handleEmailChange}
             placeholder="Email"
@@ -111,29 +116,26 @@ const Page = () => {
             ref={messageRef}
             value={message}
             className={
-              !error ? `${styles.message}` : `${styles.message} ${styles.red}`
+              !error
+                ? `${styles.message} ${styles.input}`
+                : `${styles.message} ${styles.input} ${styles.red}`
             }
             onChange={handleMessageChange}
             placeholder="Message"
           />
-          {buttonText == "Send" && (
-            <button type="submit" className={`${styles.submit} ${styles.send}`}>
-              {buttonText}
-            </button>
-          )}
-          {buttonText == "Try Again" && (
-            <button
-              type="submit"
-              className={`${styles.submit} ${styles.tryAgain}`}
-            >
-              {buttonText}
-            </button>
-          )}
-          {buttonText == "Sent" && (
-            <button type="submit" className={`${styles.submit} ${styles.sent}`}>
-              {buttonText}
-            </button>
-          )}
+          <button
+            type="submit"
+            className={`${styles.submit} ${
+              buttonText === "Try Again"
+                ? styles.tryAgain
+                : buttonText === "Sent"
+                ? styles.sent
+                : styles.send
+            }`}
+            disabled={buttonText === "Sent" || buttonText === "Sending ..."}
+          >
+            {buttonText}
+          </button>
         </form>
         <div className={styles.contactInformation}>
           <div className={styles.linkContainer}>
@@ -142,10 +144,10 @@ const Page = () => {
               NIT Durgapur, Mahatma Gandhi Avenue, Durgapur, West Bengal, India
             </div>
           </div>
-          <div className={styles.linkContainer}>
+          <a href="mailto:ieeesb.nitdgp@gmail.com" className={styles.linkContainer}>
             <IoIosMail className={styles.icon} />{" "}
             <div className={styles.data}>ieeesb.nitdgp@gmail.com</div>
-          </div>
+          </a>
           <div className={styles.linkContainer}>
             <FaPhoneSquareAlt className={styles.icon} />{" "}
             <div className={styles.data}>+91 999 999 9999</div>
