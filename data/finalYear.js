@@ -23,7 +23,7 @@ export const finalYear = [
   {
     image: "/Members/FinalYear/mohit.jpg",
     name: "Mohit Kumar",
-    post: "Vice Chair, CS Society, WebMaster",
+    post: "VC, CS Society, WebMaster",
     linkedin: "https://www.linkedin.com/in/imohit1610/",
     instagram: "https://www.instagram.com/whois_m0hit",
   },

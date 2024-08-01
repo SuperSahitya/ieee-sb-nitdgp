@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { TiThMenu } from "react-icons/ti";
+import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -98,7 +98,7 @@ const Navbar = () => {
           </div>
           <div className={styles.iconContainer} onClick={handleClick}>
             {!isOpen ? (
-              <TiThMenu className={styles.menuIcon} />
+              <IoMenu className={styles.menuIcon} />
             ) : (
               <IoClose className={styles.menuIcon} />
             )}
