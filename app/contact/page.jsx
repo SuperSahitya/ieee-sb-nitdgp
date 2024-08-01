@@ -63,7 +63,7 @@ const Page = () => {
             message: message,
           };
           console.log(messageToSend);
-          const response = await fetch("/api/sendx", {
+          const response = await fetch("/api/send", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
