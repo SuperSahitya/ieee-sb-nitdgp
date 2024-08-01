@@ -53,6 +53,7 @@
   text-decoration: none;
   color: black;
   position: relative;
+  transition: all 100ms ease-out;
 }
 
 .link::before {
@@ -64,6 +65,12 @@
   top: 50%;
   left: -10%;
   transform: translate(-50%, -50%);
+  transition: all 100ms ease-out;
+}
+
+.link:hover::before {
+  height: 7px;
+  width: 7px;
 }
 
 @media (max-width: 650px) {
@@ -90,6 +97,12 @@
 
 .socialLink {
   text-decoration: none;
-  color: var(--primary-color);
+  color: #0051ba;
   font-size: 2rem;
+  transition: all 100ms ease-out;
+}
+
+.socialLink:hover {
+  color: #002d68;
+  scale: 1.07;
 }

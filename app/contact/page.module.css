@@ -4,10 +4,11 @@
   width: 100vw;
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
+  align-items: center;
   /* padding-bottom: 10vh; */
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .heading {
@@ -70,15 +71,15 @@
 }
 
 .send {
-  background-color: var(--primary-color);
+  background-color: #0051ba;
 }
 
 .tryAgain {
-  background-color: #F75C03;
+  background-color: #f75c03;
 }
 
 .sent {
-  background-color: #16DB65;
+  background-color: #16db65;
   cursor: not-allowed;
 }
 .submit:hover {
@@ -87,6 +88,7 @@
 
 .submit:active {
   transform: scale(0.95);
+  background-color: var(--primary-color);
 }
 
 .contactInformation {
@@ -96,11 +98,14 @@
   gap: 0.5rem;
   flex-direction: column;
   padding: 2rem;
+  background-color: #eee;
+  border-radius: 5px;
 }
 
 .link {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .linkContainer {
@@ -141,6 +146,15 @@
 
 .red::placeholder {
   color: tomato;
-  font-weight: 400;
+  font-weight: 500;
 }
 
+.icon {
+  color: #0049a8;
+  transition: all 100ms ease-out;
+}
+
+.icon:hover {
+  scale: 1.1;
+  color: var(--primary-color);
+}

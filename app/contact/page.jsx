@@ -138,13 +138,19 @@ const Page = () => {
           </button>
         </form>
         <div className={styles.contactInformation}>
-          <div className={styles.linkContainer}>
+          <a
+            href="https://www.google.com/maps/place/National+Institute+of+Technology,+Durgapur/@23.547672,87.293997,15z/data=!4m6!3m5!1s0x39f772081cede5e9:0x33fb9ccb243dfa5!8m2!3d23.5476717!4d87.2931383!16zL20vMDg1ejlf?hl=en&entry=ttu"
+            className={styles.linkContainer}
+          >
             <HiLocationMarker className={styles.icon}></HiLocationMarker>
             <div className={styles.data}>
               NIT Durgapur, Mahatma Gandhi Avenue, Durgapur, West Bengal, India
             </div>
-          </div>
-          <a href="mailto:ieeesb.nitdgp@gmail.com" className={styles.linkContainer}>
+          </a>
+          <a
+            href="mailto:ieeesb.nitdgp@gmail.com"
+            className={styles.linkContainer}
+          >
             <IoIosMail className={styles.icon} />{" "}
             <div className={styles.data}>ieeesb.nitdgp@gmail.com</div>
           </a>

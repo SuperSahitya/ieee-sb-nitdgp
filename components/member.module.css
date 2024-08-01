@@ -57,4 +57,10 @@
 .icon {
   font-size: 1.3rem;
   margin-top: 0.3rem;
+  transition: all 100ms ease-out;
+}
+
+.icon:hover {
+  scale: 1.1;
+  color: #0051ba;
 }
