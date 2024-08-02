@@ -1,29 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./member.module.css";
-import { FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import Image from "next/image";
+import MemberSkeleton from "./MemberSkeleton";
 
 const Member = ({ name, post, image, linkedin, instagram }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className={styles.container}>
-      <div
-        className={styles.image}
-        style={{
-          background: `url(${image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+      <div className={styles.imageWrapper}>
+        {!imageLoaded && <MemberSkeleton />}
+        <Image
+          src={image}
+          alt={`${name}'s photo`}
+          fill="true"
+          style={{ objectFit: "cover" }}
+          className={styles.image}
+          onLoad={() => setImageLoaded(true)}
+        />
+      </div>
       <div className={styles.details}>
         <div className={styles.name}>{name}</div>
         <div className={styles.post}>{post}</div>
         {linkedin && instagram && (
           <div className={styles.icons}>
-            <a href={linkedin} target="_blank">
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
               <FaLinkedinIn className={styles.icon} />
             </a>
-            <a href={instagram} target="_blank">
+            <a href={instagram} target="_blank" rel="noopener noreferrer">
               <FaInstagram className={styles.icon} />
             </a>
           </div>

@@ -1,4 +1,5 @@
 .container {
+  border-top: 3px solid white;
   width: 100%;
   background-color: #eeeeee;
   display: flex;

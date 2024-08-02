@@ -21,12 +21,15 @@
     rgba(46, 124, 240, 0.1) -20px 20px, rgba(46, 130, 240, 0.05) -25px 25px;
 }
 
-.image {
+.imageWrapper {
   width: 280px;
   height: 280px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image {
   border-radius: 10px;
 }
 

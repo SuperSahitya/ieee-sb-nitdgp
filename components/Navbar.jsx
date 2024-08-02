@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -78,7 +79,13 @@ const Navbar = () => {
           //     : { backgroundColor: "transparent" }
           // }
         >
-          <Link className={styles.logo} href={"/"}><div className={styles.logoImage}></div></Link>
+          <Link className={styles.logo} href={"/"}><Image
+              src="/ieeesb_logo_white.png"
+              className={styles.logoImage}
+              loading="eager"
+              width={710}
+              height={360}
+            /></Link>
           <div className={styles.navLinks}>
             {linkArray.map((link, idx) => {
               return (

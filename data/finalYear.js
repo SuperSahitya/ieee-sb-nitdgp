@@ -1,6 +1,6 @@
 export const finalYear = [
   {
-    image: "/Members/FinalYear/IEEE-BSV.jpeg",
+    image: "/Members/FinalYear/Vamsi.jpg",
     name: "Balivada Sri Vamsi",
     post: "Chair",
     linkedin: "https://www.linkedin.com/in/balivada-sri-vamsi-5299aa228",
