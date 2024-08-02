@@ -51,7 +51,7 @@ export const secondYear = [
   },
   {
     image: "/Members/SecondYear/Mahima.jpg",
-    name: "Mahima Singvi",
+    name: "Mahima Singhvi",
     post: "Member",
     linkedin: "https://www.linkedin.com/in/mahima-singhvi-193217293",
     instagram: "https://www.instagram.com/_mahima.singhvi_",
