@@ -79,13 +79,15 @@ const Navbar = () => {
           //     : { backgroundColor: "transparent" }
           // }
         >
-          <Link className={styles.logo} href={"/"}><Image
+          <Link className={styles.logo} href={"/"}>
+            <Image
               src="/ieeesb_logo_white.png"
               className={styles.logoImage}
-              loading="eager"
+              priority={true}
               width={710}
               height={360}
-            /></Link>
+            />
+          </Link>
           <div className={styles.navLinks}>
             {linkArray.map((link, idx) => {
               return (
