@@ -68,7 +68,7 @@ export const secondYear = [
     name: "Prasun Biswas",
     post: "Member",
     linkedin: "https://www.linkedin.com/in/prasun-biswas-953874254",
-    instagram: "https://www.instagram.com/prasun_ps.07",
+    instagram: "https://www.instagram.com/prasun_ps.45",
   },
   {
     image: "/Members/SecondYear/Radha.jpg",
