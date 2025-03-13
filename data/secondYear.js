@@ -29,6 +29,14 @@ export const secondYear = [
     instagram: "https://www.instagram.com/_ankita0906_/",
   },
   {
+    image: "/Members/SecondYear/Ankita1.jpg",
+    name: "Shivam Kumar Aryan",
+    post: "Member",
+    linkedin:
+      "https://www.linkedin.com/in/shivam-kumar-aryan-242804347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    instagram: "https://www.instagram.com/_a.ryann_singh",
+  },
+  {
     image: "/Members/SecondYear/Ashar.jpg",
     name: "Ashar Alam",
     post: "Member",
@@ -36,11 +44,27 @@ export const secondYear = [
     instagram: "https://www.instagram.com/asharxefsane",
   },
   {
+    image: "/Members/SecondYear/Authy.jpg",
+    name: "Authy Saha",
+    post: "Member",
+    linkedin:
+      "https://www.linkedin.com/in/authy-saha-a41929350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/authysaha?igsh=MWg3Z2UxeWtvdjlreA==",
+  },
+  {
     image: "/Members/SecondYear/Divyam.jpg",
     name: "Divyam Sharma",
     post: "Member",
     linkedin: "https://www.linkedin.com/in/divyam-sharma-378279220",
     instagram: "https://www.instagram.com/divyam.sharma.589100",
+  },
+  {
+    image: "/Members/SecondYear/Debanuj.jpg",
+    name: "Debanuj Roy",
+    post: "Member",
+    linkedin:
+      "https://www.linkedin.com/in/debanuj-roy-b3709b275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/debanujroy?igsh=M2s0NmNkYzNqY2ln",
   },
   {
     image: "/Members/SecondYear/Hardik.jpg",
@@ -98,6 +122,13 @@ export const secondYear = [
     post: "Member",
     linkedin: "https://www.linkedin.com/in/snehita-patta-3505a72aa",
     instagram: "https://www.instagram.com/snehita__patta",
+  },
+  {
+    image: "/Members/SecondYear/Shayantan.jpg",
+    name: "Shayantan Biswas",
+    post: "Member",
+    linkedin: "https://www.linkedin.com/in/shayantan-biswas-058746292/",
+    instagram: "https://www.instagram.com/shayantan_biswas101204/?__pwa=1",
   },
   {
     image: "/Members/SecondYear/Sohom.jpg",
