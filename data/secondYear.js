@@ -29,7 +29,7 @@ export const secondYear = [
     instagram: "https://www.instagram.com/_ankita0906_/",
   },
   {
-    image: "/Members/SecondYear/Ankita1.jpg",
+    image: "/Members/SecondYear/aryan.jpg",
     name: "Shivam Kumar Aryan",
     post: "Member",
     linkedin:
